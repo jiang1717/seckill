@@ -99,8 +99,8 @@
 
 **项目编码开发：**
 
-* [项目创建及配置依赖](./notes/0_init)
-* [DAO设计编码](./notes/1_DAO)：数据库的表示问题、DAO的接口、MyBatis实现DAO
-* [Service设计编码](./notes/2_Service)：接口设计、编码实现、通过spring管理、通过声明式事务简化事务控制
-* [Web设计编码](./notes/3_Web)：RESTful设计、前端交互
-* [高并发优化](./notes/4_Optimization)
+* [项目创建及配置依赖](./notes/0_init.md)
+* [DAO设计编码](./notes/1_DAO.md)：数据库的表示问题、DAO的接口、MyBatis实现DAO
+* [Service设计编码](./notes/2_Service.md)：接口设计、编码实现、通过spring管理、通过声明式事务简化事务控制
+* [Web设计编码](./notes/3_Web.md)：RESTful设计、前端交互
+* [高并发优化](./notes/4_Optimization.md)
