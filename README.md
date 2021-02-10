@@ -35,19 +35,19 @@
 
 秒杀列表页：
 
-![list](figure/list.png)
+![list](./figure/list.png)
 
 秒杀未开始：
 
-![countdown](figure/countdown.png)
+![countdown](./figure/countdown.png)
 
 秒杀已结束：
 
-![end](figure/end.png)
+![end](./figure/end.png)
 
 准备秒杀：
 
-![start](figure/start.png)
+![start](./figure/start.png)
 
 
 
@@ -64,7 +64,7 @@
 
 ## 业务分析
 
-<img src="figure/system.png" alt="system" style="zoom:80%;" />
+<img src="./figure/system.png" alt="system" style="zoom:80%;" />
 
 秒杀业务的核心是**对库存的处理**，执行秒杀需要做两件事情：减库存、记录购买明细（谁购买、成功时间、付款/发货信息）。
 
@@ -89,7 +89,7 @@
 
 行级锁工作机制：
 
-<img src="figure/rowlock.png" alt="rowlock" style="zoom:80%;" />
+<img src="./figure/rowlock.png" alt="rowlock" style="zoom:80%;" />
 
 **实现的秒杀功能：**
 
@@ -99,8 +99,8 @@
 
 **项目编码开发：**
 
-* [项目创建及配置依赖](notes/0_init)
-* [DAO设计编码](notes/1_DAO)：数据库的表示问题、DAO的接口、MyBatis实现DAO
-* [Service设计编码](notes/2_Service)：接口设计、编码实现、通过spring管理、通过声明式事务简化事务控制
-* [Web设计编码](notes/3_Web)：RESTful设计、前端交互
-* [高并发优化](notes/4_Optimization)
+* [项目创建及配置依赖](./notes/0_init)
+* [DAO设计编码](./notes/1_DAO)：数据库的表示问题、DAO的接口、MyBatis实现DAO
+* [Service设计编码](./notes/2_Service)：接口设计、编码实现、通过spring管理、通过声明式事务简化事务控制
+* [Web设计编码](./notes/3_Web)：RESTful设计、前端交互
+* [高并发优化](./notes/4_Optimization)

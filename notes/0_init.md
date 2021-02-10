@@ -27,7 +27,7 @@ maven命令创建web骨架项目：`mvn archetype:generate -DgroupId=org.seckill
 </web-app>
 ```
 
-[pom.xml](pom.xml)文件是Maven工程自带的，用来添加第三包jar包的依赖信息，补全项目依赖：
+[pom.xml](../pom.xml)文件是Maven工程自带的，用来添加第三包jar包的依赖信息，补全项目依赖：
 
 1. 使用junit4
 
