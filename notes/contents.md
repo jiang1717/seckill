@@ -42,7 +42,7 @@
 │                  SeckillController.java
 │                  
 ├─resources
-│  │  jdbc.properties
+│  │  jdbc.properties  `jdbc配置文件`
 │  │  logback.xml
 │  │  mybatis-config.xml  `Mybatis全局的配置文件`
 │  │  
@@ -50,8 +50,8 @@
 │  │      SeckillDao.xml  `对应于SeckillDao接口，使用标签执行sql语句`
 │  │      SuccessKilledDao.xml  `对应于SuccessKilledDao接口，使用标签执行sql语句`
 │  │      
-│  └─spring
-│          spring-dao.xml
+│  └─spring  `spring相关配置文件`
+│          spring-dao.xml  `所有dao相关配置`
 │          spring-service.xml
 │          spring-web.xml
 │      

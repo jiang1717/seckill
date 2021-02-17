@@ -143,3 +143,95 @@ MyBatis提供了两种方式：
 * 如何告诉 Mybatis 把结果映射到 SuccessKilled 同时映射 seckill 属性：
   * 通过别名的方式 `s.seckill_id as "seckill.seckill_id",<!-- as可省略 -->`
 
+
+
+## 4. myBatis整合Spring
+
+### 4.1 理论
+
+约定大于配置
+
+整合目标：
+
+* 更少的编码：只写接口，不写实现
+* 更少的配置：
+  * 包扫描：别名，省去写包名的过程
+  * 配置扫描：自动扫描配置文件
+  * dao实现：自动实现DAO接口、自动注入spring容器
+* 足够的灵活性：自己定制SQL、自由传参、结果集自动赋值
+
+
+
+### 4.2  编码 
+
+在resources下新建目录spring，这个目录下的都是spring相关的配置，新建[dao的相关配置文件](../src/main/resources/spring/spring-dao.xml)。
+
+首先是spring中.xml配置文件头部
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd>
+```
+
+接下来是配置整合MyBatis的过程：
+
+1. 配置数据库相关参数properties的属性：新建[jdbc配置文件](../src/main/resources/jdbc.properties)
+
+   ```
+   driver=com.mysql.jdbc.Driver
+   url=jdbc:mysql://127.0.0.1:3306/seckill?useUnicode=true&characterEncoding=utf8
+   usrname=root
+   password=root
+   ```
+
+2. 数据库的连接池
+
+   1. 配置连接池基本属性：驱动、url、用户名、密码
+   2. c3p0连接池的私有属性：连接数上、下限
+   3. 关闭连接后不自动commit
+   4. 获取链接超时时间
+   5. 获取连接失败的重试次数
+
+3. **配置SqlSessionFsactory对象**
+
+   1. 注入数据库链接池：也就是2所配置的数据库连接池
+   2. 配置mybatis全局配置文件： [mybatis-config.xml](../src/main/resources/mybatis-config.xml)
+   3. 扫描entity包 使用别名 org.seckill.entity.Seckill——>Seckill
+   4. 扫描sql配置文件：mapper需要的xml文件
+
+4. **配置扫描Dao接口包，动态实现Dao接口，注入到spring容器中** 
+
+   1. 注入sqlSessionFactory：也就是3所配置的SqlSessionFsactory
+   2. 给出扫描Dao接口包
+
+
+
+## 5.  DAO层单元测试编码和问题排查
+
+[SeckillDaoTest.java](../src/test/java/org/seckill/dao/SeckillDaoTest.java)
+
+[SuccessKilledDaoTest.java](../src/test/java/org/seckill/dao/SuccessKilledDaoTest.java)
+
+**配置spring和junit整合**
+
+junit启动时加载springIOC容器
+
+```java
+@RunWith(SpringJUnit4ClassRunner.class)
+```
+
+告诉junit spring配置文件
+
+```java
+@ContextConfiguration({"classpath:spring/spring-dao.xml"})
+```
+
+注入Dao实现类依赖
+
+```java
+@Resource
+private SeckillDao seckillDao;
+private SuccessKilledDao successKilledDao;
+```
