@@ -9,7 +9,9 @@
     <list default="true" id="5bd51c09-5143-455c-9f9f-73065af2d54a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes/1_DAO.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/1_DAO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/2_Service.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/2_Service.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes/contents.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/contents.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seckill/service/impl/SeckillServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seckill/service/impl/SeckillServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -401,7 +403,8 @@
       <workItem from="1612970404179" duration="3973000" />
       <workItem from="1613030948588" duration="9123000" />
       <workItem from="1613377089866" duration="1997000" />
-      <workItem from="1613575430080" duration="2039000" />
+      <workItem from="1613575430080" duration="2743000" />
+      <workItem from="1613711369107" duration="9098000" />
     </task>
     <servers />
   </component>
@@ -550,15 +553,16 @@
     <state width="1149" height="510" key="GridCell.Tab.3.right/0.0.1536.834@0.0.1536.834" timestamp="1612866981967" />
     <state width="866" height="80" key="GridCell.Tab.3.right/1920.423.1280.700/0.30.1920.1050@0.30.1920.1050" timestamp="1612971357525" />
     <state width="866" height="80" key="GridCell.Tab.3.right/1920.423.1280.700/0.30.1920.1050@1920.423.1280.700" timestamp="1612992410179" />
-    <state x="229" y="78" width="1218" height="834" key="SettingsEditor" timestamp="1612865570777">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="229" y="78" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1612865570777" />
-    <state x="702" y="93" width="1218" height="834" key="SettingsEditor/1920.423.1280.700/0.30.1920.1050@0.30.1920.1050" timestamp="1612778288626" />
-    <state x="2384" y="650" key="com.intellij.ide.util.TipDialog" timestamp="1613575443464">
+    <state x="2111" y="403" width="1218" height="834" key="SettingsEditor" timestamp="1613726075133">
       <screen x="1920" y="403" width="1280" height="720" />
     </state>
-    <state x="2384" y="650" key="com.intellij.ide.util.TipDialog/1920.403.1280.720/0.0.1920.1080@1920.403.1280.720" timestamp="1613575443464" />
+    <state x="229" y="78" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1612865570777" />
+    <state x="2111" y="403" key="SettingsEditor/1920.403.1280.720/0.0.1920.1080@1920.403.1280.720" timestamp="1613726075133" />
+    <state x="702" y="93" width="1218" height="834" key="SettingsEditor/1920.423.1280.700/0.30.1920.1050@0.30.1920.1050" timestamp="1612778288626" />
+    <state x="2384" y="650" key="com.intellij.ide.util.TipDialog" timestamp="1613711373527">
+      <screen x="1920" y="403" width="1280" height="720" />
+    </state>
+    <state x="2384" y="650" key="com.intellij.ide.util.TipDialog/1920.403.1280.720/0.0.1920.1080@1920.403.1280.720" timestamp="1613711373527" />
     <state x="1132" y="386" key="com.intellij.ide.util.TipDialog/1920.423.1280.700/0.30.1920.1050@0.30.1920.1050" timestamp="1612970404417" />
     <state x="2593" y="660" key="com.intellij.ide.util.TipDialog/1920.423.1280.700/0.30.1920.1050@1920.423.1280.700" timestamp="1613032306787" />
     <state x="804" y="221" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1612618114448">

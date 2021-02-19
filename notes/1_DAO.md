@@ -210,10 +210,6 @@ MyBatis提供了两种方式：
 
 ## 5.  DAO层单元测试编码和问题排查
 
-[SeckillDaoTest.java](../src/test/java/org/seckill/dao/SeckillDaoTest.java)
-
-[SuccessKilledDaoTest.java](../src/test/java/org/seckill/dao/SuccessKilledDaoTest.java)
-
 **配置spring和junit整合**
 
 junit启动时加载springIOC容器

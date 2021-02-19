@@ -67,6 +67,12 @@ public class SeckillServiceImpl implements SeckillService {
         return new Exposure(true, md5, seckillId);
     }
 
+    private String getMD5(long seckillId){
+        String base = seckillId + "/" + slat;
+        String md5 = DigestUtils.md5DigestAsHex(base.getBytes());
+        return md5;
+    }
+
     @Override
     @Transactional
     /**
@@ -109,11 +115,5 @@ public class SeckillServiceImpl implements SeckillService {
             //所有编译器异常 转化为运行期异常
             throw new SeckillException("seckill inner error:" + e.getMessage());
         }
-    }
-
-    private String getMD5(long seckillId){
-        String base = seckillId + "/" + slat;
-        String md5 = DigestUtils.md5DigestAsHex(base.getBytes());
-        return md5;
     }
 }

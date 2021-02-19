@@ -15,35 +15,35 @@
 │          │      SeckillDao.java  `对应Seckill实体类的接口`
 │          │      SuccessKilledDao.java  `对应SuccessKilled实体类的接口`
 │          │      
-│          ├─dto
-│          │      Exposure.java
-│          │      SeckillExecution.java
+│          ├─dto  `数据传输层，关注web和service之间的数据传递`
+│          │      Exposure.java  `暴露秒杀地址`
+│          │      SeckillExecution.java `封装秒杀后的执行结果`
 │          │      SeckillResult.java
 │          │      
 │          ├─entity  `实体类`
 │          │      Seckill.java  `对应秒杀库存表的实体类`
 │          │      SuccessKilled.java  `对应秒杀信息表的实体类`
 │          │      
-│          ├─enums
-│          │      SeckillStateEnum.java
+│          ├─enums  `枚举类型`
+│          │      SeckillStateEnum.java  `使用枚举表述常量数据字典`
 │          │      
-│          ├─exception
-│          │      RepeatKillException.java
-│          │      SeckillCloseException.java
-│          │      SeckillException.java
+│          ├─exception  `异常类，存放service所需要的异常`
+│          │      RepeatKillException.java  `重复秒杀异常`
+│          │      SeckillCloseException.java  `秒杀关闭异常`
+│          │      SeckillException.java  `秒杀相关业务异常`
 │          │      
-│          ├─service
-│          │  │  SeckillService.java
+│          ├─service  `service层，业务逻辑层`
+│          │  │  SeckillService.java  `Service接口`
 │          │  │  
 │          │  └─impl
-│          │          SeckillServiceImpl.java
+│          │          SeckillServiceImpl.java  `Service接口实现`
 │          │          
 │          └─web
 │                  SeckillController.java
 │                  
 ├─resources
 │  │  jdbc.properties  `jdbc配置文件`
-│  │  logback.xml
+│  │  logback.xml  `日志配置文件`
 │  │  mybatis-config.xml  `Mybatis全局的配置文件`
 │  │  
 │  ├─mapper  `存放MyBatis sql映射`
@@ -52,7 +52,7 @@
 │  │      
 │  └─spring  `spring相关配置文件`
 │          spring-dao.xml  `所有dao相关配置`
-│          spring-service.xml
+│          spring-service.xml  `所有service相关配置`
 │          spring-web.xml
 │      
 └─webapp
