@@ -18,7 +18,7 @@
 │          ├─dto  `数据传输层，关注web和service之间的数据传递`
 │          │      Exposure.java  `暴露秒杀地址`
 │          │      SeckillExecution.java `封装秒杀后的执行结果`
-│          │      SeckillResult.java
+│          │      SeckillResult.java  `封装json结果`
 │          │      
 │          ├─entity  `实体类`
 │          │      Seckill.java  `对应秒杀库存表的实体类`
@@ -38,10 +38,10 @@
 │          │  └─impl
 │          │          SeckillServiceImpl.java  `Service接口实现`
 │          │          
-│          └─web
-│                  SeckillController.java
+│          └─web  `web层`
+│                  SeckillController.java  `实现所有的秒杀api`
 │                  
-├─resources
+├─resources  `配置文件夹`
 │  │  jdbc.properties  `jdbc配置文件`
 │  │  logback.xml  `日志配置文件`
 │  │  mybatis-config.xml  `Mybatis全局的配置文件`
@@ -53,25 +53,25 @@
 │  └─spring  `spring相关配置文件`
 │          spring-dao.xml  `所有dao相关配置`
 │          spring-service.xml  `所有service相关配置`
-│          spring-web.xml
+│          spring-web.xml  `所有web相关配置`
 │      
 └─webapp
-    │  index.jsp
+    │  index.jsp  `主页`
     │  
     ├─resources
     │  └─script
-    │          seckill.js
+    │          seckill.js  `存放主要交互逻辑js代码(cookie登陆交互、计时交互、秒杀交互)`
     │          
     └─WEB-INF   `Java的WEB应用的安全目录。如果想在页面中直接访问其中的文件，必须通过web.xml文件对要访问的文件进行相应映射才能访问。`
         │  web.xml  `用来配置：欢迎页、servlet、filter等的，并不是Java web工程所必需的，可以不用`
         │  
-        └─jsp
-            │  detail.jsp
-            │  list.jsp
+        └─jsp  `存放页面jsp文件`
+            │  detail.jsp  `详情页jsp文件`
+            │  list.jsp  `列表页jsp文件`
             │  
-            └─common
-                    head.jsp
-                    tag.jsp
+            └─common  `所有页面的重复部分，通用jsp`
+                    head.jsp  `引入Bootstrap等通用部分`
+                    tag.jsp  `引入jstl`
 
 **test文件目录**
 

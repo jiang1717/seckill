@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!-- 引入jst1 -->
+<!-- 引入jstl -->
 <%@include file="common/tag.jsp"%>
 <!DOCTYPE html>
 <html>
