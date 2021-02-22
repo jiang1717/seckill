@@ -64,4 +64,16 @@ public class SeckillServiceTest {
         // md5='76ed7dd7b681b726c4dd7ef31ac5e480',
         // seckillId=1000, now=0, start=0, end=0}
     }
+
+    @Test
+    public void executeSeckillProcedure() {
+        long seckillId = 1003;
+        long phone = 15598423669L;
+        Exposure exposure = seckillService.exportSeckillUrl(seckillId);
+        if(exposure.isExposed()){
+            String md5 = exposure.getMd5();
+            SeckillExecution execution = seckillService.executeSeckillProcedure(seckillId, phone, md5);
+            logger.info(execution.getStateInfo());
+        }
+    }
 }

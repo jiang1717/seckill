@@ -12,9 +12,12 @@
 │  └─org
 │      └─seckill
 │          ├─dao  `dao接口`
-│          │      SeckillDao.java  `对应Seckill实体类的接口`
-│          │      SuccessKilledDao.java  `对应SuccessKilled实体类的接口`
-│          │      
+│          │   │ SeckillDao.java  `对应Seckill实体类的接口`
+│          │   │ SuccessKilledDao.java  `对应SuccessKilled实体类的接口`
+│          │   │  
+│          │   └─cache  
+│          │          RedisDao.java  `Redis数据访问对象`
+│          │
 │          ├─dto  `数据传输层，关注web和service之间的数据传递`
 │          │      Exposure.java  `暴露秒杀地址`
 │          │      SeckillExecution.java `封装秒杀后的执行结果`
